@@ -7,10 +7,10 @@ class Main extends Component {
         return (
            <div className="wrapper wrapper-content animated fadeInRight">
 
-               {[,...Array(10)].map((x, i) =>
+               {[,...Array(6)].map((x, i) =>
                    <div className="row">
-                        {[,...Array(4)].map((x, i) =>
-                            <div className="col-md-3">
+                        {[,...Array(6)].map((x, i) =>
+                            <div className="col-md-2">
                                 <ItemGrid key={i + 1}></ItemGrid>
                             </div>
                         )}

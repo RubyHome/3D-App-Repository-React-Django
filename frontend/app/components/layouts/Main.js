@@ -3,7 +3,10 @@ import Progress from '../common/Progress';
 import Navigation from '../common/Navigation';
 import Footer from '../common/Footer';
 import TopHeader from '../common/TopHeader';
+import MyModal from '../common/MyModal';
+import LibraryModal from '../common/LibraryModal';
 import { correctHeight, detectBody } from './Helpers';
+
 
 class Main extends React.Component {
 
@@ -12,16 +15,11 @@ class Main extends React.Component {
         return (
             <div id="wrapper">
                 <Progress />
+                <TopHeader />
                 <Navigation location={this.props.location}/>
-
                 <div id="page-wrapper" className={wrapperClass}>
-
-                    <TopHeader />
-
                     {this.props.children}
-
                     <Footer />
-
                 </div>
 
             </div>
