@@ -22,7 +22,7 @@ class Signin extends Component {
                         <button type="submit" className="btn btn-primary block full-width m-b">Login</button>
                         <a href="#"><small>Forgot password?</small></a>
                         <p className="text-muted text-center"><small>Do not have an account?</small></p>
-                        <a className="btn btn-sm btn-white btn-block" href="register.html">Create an account</a>
+                        <a className="btn btn-sm btn-white btn-block" href="#">Create an account</a>
                     </form>
                     <p className="m-t"> <small>Inspinia we app framework base on Bootstrap 3 &copy; 2014</small> </p>
                 </div>

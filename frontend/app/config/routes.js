@@ -10,6 +10,7 @@ import { Route, Router, IndexRedirect, browserHistory} from 'react-router';
 
 export default (
     <Router history={browserHistory}>
+    	
         <Route path="/" component={Main}>
             <IndexRedirect to="/main" />
             <Route path="main" component={MainView}> </Route>

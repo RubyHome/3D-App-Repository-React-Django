@@ -1,6 +1,5 @@
 import React from 'react';
 import { Dropdown, Modal, Button , ButtonToolbar ,Carousel } from 'react-bootstrap';
-import MyCarousel from './MyCarousel';
 import SwiperComponent from './SwiperComponent';
 
 const LibraryModal = React.createClass({

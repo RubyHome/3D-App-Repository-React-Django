@@ -1,3 +1,4 @@
+alert("here here here");
  var galleryTop = new Swiper('.gallery-top', {
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
