@@ -28,7 +28,6 @@ class Main extends React.Component {
     }
 
     componentDidMount() {
-
         // Run correctHeight function on load and resize window event
         $(window).bind("load resize", function() {
             correctHeight();

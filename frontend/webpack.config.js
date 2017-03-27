@@ -2,6 +2,8 @@ var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+console.log("*************************")
+console.log(path.join(__dirname, '../static/'))
 var config = {
     entry: {
         app: [
@@ -13,9 +15,9 @@ var config = {
     },
     devtool: 'eval',
     output: {
-        path: path.join(__dirname, '/public/'),
-        filename: 'bundle.js',
-        publicPath: '/'
+        path: path.join(__dirname, '../static/'),
+        filename: 'bundle.js'
+        // publicPath: '/'
     },
     plugins: [
         new ExtractTextPlugin("styles.css"),

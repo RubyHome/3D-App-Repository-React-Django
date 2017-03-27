@@ -29,7 +29,7 @@ class TopHeader extends React.Component {
                             </div>
                         </li>
                         <li>
-                           <Link to="/signin"><i className="fa fa-sign-out"></i> Log out</Link>
+                           <Link to="/index"><i className="fa fa-sign-out"></i> Log out</Link>
                         </li>
                     </ul>
                 </nav>
