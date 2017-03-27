@@ -12,7 +12,7 @@ class Signin extends Component {
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
-        this.handleChange1 = this.handleChange1.bind(this);
+        this.handleChange_password = this.handleChange_password.bind(this);
         this.handleGet = this.handleGet.bind(this);
     }
 
@@ -103,7 +103,7 @@ class Signin extends Component {
             console.log(e.target.value);
         }
 
-        handleChange1(e){
+        handleChange_password(e){
             this.setState({
                 password : e.target.value
             });
@@ -128,7 +128,7 @@ class Signin extends Component {
                         </div>
                         <div className="form-group">
                             <input type="password" className="form-control" value={this.state.password} 
-                            onChange={this.handleChange1} placeholder="Password" required></input>
+                            onChange={this.handleChange_password} placeholder="Password" required></input>
                         </div>
                         <button type="button" className="btn btn-primary block full-width m-b" onClick={this.handleSubmit}>Login</button>
                         <p className="text-muted text-center"><small>Do not have an account?</small></p>
