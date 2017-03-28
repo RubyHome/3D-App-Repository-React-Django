@@ -24,7 +24,7 @@ class TopHeader extends React.Component {
                     <ul className="nav navbar-top-links navbar-right">
                         <li>
                             <div className="dropdown profile-element"> <span>
-                                <img alt="image" className="img-circle" src="img/profile_small.jpg" />
+                                <img alt="image" className="img-circle" src="static/img/profile_small.jpg" />
                                  </span>
                             </div>
                         </li>

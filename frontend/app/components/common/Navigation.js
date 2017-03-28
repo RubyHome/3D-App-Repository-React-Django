@@ -4,9 +4,32 @@ import { Link, Location } from 'react-router';
 
 class Navigation extends Component {
 
+    constructor(props, context) {
+        super(props, context);
+        this.state = {
+            categorys : ''
+        }
+        
+    }
+
     componentDidMount() {
-        const { menu } = this.refs;
-        $(menu).metisMenu();
+         $.ajax({
+              url: '/categorys',
+              method: 'GET',
+              cache: false,
+              success: function(data) {
+                console.log("categorys part")
+                console.log(data)
+                this.setState({
+                  categorys : JSON.parse(data)
+                });
+              }.bind(this),
+              error: function(xhr, status, err) {
+                this.setState({
+                  message : "something went wrong",
+                });
+              }.bind(this)
+            });
     }
 
     activeRoute(routeName) {
@@ -37,9 +60,9 @@ class Navigation extends Component {
                         <li className={this.activeRoute("/minor")}>
                             <Link to="/minor"><i className="fa fa-th-large"></i> <span className="nav-label">Category2</span></Link>
                         </li>
-                        {[,...Array(4)].map((x, i) =>
+                        {this.state.categorys.map((category, i) =>
                             <li>
-                                <Link to="/main"><i className="fa fa-th-large"></i> <span className="nav-label">Category{i+2}</span></Link>
+                                <Link to="/main"><i className="fa fa-th-large"></i> <span className="nav-label">{category.name}</span></Link>
                             </li>
                         )}
                     </ul>

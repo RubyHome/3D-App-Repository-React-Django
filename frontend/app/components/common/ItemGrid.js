@@ -1,6 +1,7 @@
 import React from 'react';
 
 class ItemGrid extends React.Component {
+    
     render() {
         return (
             <div className="ibox">
@@ -13,7 +14,7 @@ class ItemGrid extends React.Component {
                             $10
                         </span>
                         <small className="text-muted"></small>
-                        <center><a href="javascript: void(0)" className="product-name">AppName</a></center>
+                        <center><a href="javascript: void(0)" className="product-name">{this.props.product.name}</a></center>
                     </div>
                 </div>
             </div>
