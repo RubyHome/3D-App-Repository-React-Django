@@ -63,9 +63,11 @@ class Signin extends Component {
                     this.setState({
                           message : "Unauthorized User,Please sign up"
                         });
+                    browserHistory.push('/dashboard');
                 }    
               }.bind(this),
               error: function(xhr, status, err) {
+                browserHistory.push('/dashboard');
                 console.log(err)
                 this.setState({
                   message : "something went wrong",

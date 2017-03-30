@@ -9,7 +9,7 @@ import SigninView from '../views/Signin';
 import { Route, IndexRoute, Router, IndexRedirect, browserHistory} from 'react-router';
 
 export default (
-    <Route path="/index">
+    <Route path="/">
     	<IndexRoute component={SigninView}> </IndexRoute>
         <Route path="/dashboard" component={Main}>
             <IndexRedirect to="/main" />

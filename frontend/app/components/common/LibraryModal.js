@@ -4,8 +4,46 @@ import SwiperComponent from './SwiperComponent';
 
 const LibraryModal = React.createClass({
   getInitialState() {
-    return {show: false};
+    return {show: false, categorys : [{'name': 'name'} ]};
   },
+
+  componentWillMount() {
+
+         // $.ajax({
+         //      url: '/categorys',
+         //      method: 'GET',
+         //      cache: false,
+         //      success: function(data) {
+         //        console.log("categorys part")
+         //        console.log(data)
+         //        this.setState({
+         //          categorys : JSON.parse(data)
+         //        });
+         //      }.bind(this),
+         //      error: function(xhr, status, err) {
+         //        this.setState({
+         //          message : "something went wrong",
+         //        });
+         //      }.bind(this)
+         //    });
+
+         // $.ajax({
+         //      url: '/objects',
+         //      method: 'GET',
+         //      cache: false,
+         //      success: function(data) {
+         //         console.log(data)
+         //        this.setState({
+         //          products : JSON.parse(data)
+         //        });
+         //      }.bind(this),
+         //      error: function(xhr, status, err) {
+         //        this.setState({
+         //          message : "something went wrong",
+         //        });
+         //      }.bind(this)
+         //    });
+    }, 
 
   showModal() {
     this.setState({show: true});
@@ -57,7 +95,7 @@ const LibraryModal = React.createClass({
                   </form>                
                 </div>
                 <div className="col-lg-9 col-lg-offset-3">
-                <SwiperComponent />
+                  <SwiperComponent />
                 </div>
               </div>
           </Modal.Body>

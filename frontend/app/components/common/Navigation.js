@@ -7,12 +7,12 @@ class Navigation extends Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
-            categorys : ''
+            categorys : []
         }
         
     }
 
-    componentDidMount() {
+    componentWillMount() {
          $.ajax({
               url: '/categorys',
               method: 'GET',
@@ -54,15 +54,10 @@ class Navigation extends Component {
                             <br></br>
                             <br></br>
                         </li>
-                        <li className={this.activeRoute("/main")}>
-                            <Link to="/main"><i className="fa fa-th-large"></i> <span className="nav-label">Category1</span></Link>
-                        </li>
-                        <li className={this.activeRoute("/minor")}>
-                            <Link to="/minor"><i className="fa fa-th-large"></i> <span className="nav-label">Category2</span></Link>
-                        </li>
+                     
                         {this.state.categorys.map((category, i) =>
                             <li>
-                                <Link to="/main"><i className="fa fa-th-large"></i> <span className="nav-label">{category.name}</span></Link>
+                                <Link to="/main/${category}" ><i className="fa fa-th-large"></i> <span className="nav-label">{category.name}</span></Link>
                             </li>
                         )}
                     </ul>
