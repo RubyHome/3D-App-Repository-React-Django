@@ -164,6 +164,7 @@ WEBPACK_LOADER = {
 }
 
 
+APPEND_SLASH = True
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
