@@ -37,7 +37,6 @@ class Main extends Component {
         return (
            <div className="wrapper wrapper-content animated fadeInRight">
                    <div className="row">
-
                         {this.state.products.map((product, index) =>
                             <div className="col-md-2">
                                 <ItemGrid key={index + 1} product={product}></ItemGrid>

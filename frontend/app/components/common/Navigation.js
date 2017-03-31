@@ -9,27 +9,26 @@ class Navigation extends Component {
         this.state = {
             categorys : []
         }
-        
     }
 
     componentWillMount() {
-         $.ajax({
-              url: '/categorys',
-              method: 'GET',
-              cache: false,
-              success: function(data) {
-                console.log("categorys part")
-                console.log(data)
-                this.setState({
-                  categorys : JSON.parse(data)
-                });
-              }.bind(this),
-              error: function(xhr, status, err) {
-                this.setState({
-                  message : "something went wrong",
-                });
-              }.bind(this)
-            });
+         // $.ajax({
+         //      url: '/categorys',
+         //      method: 'GET',
+         //      cache: false,
+         //      success: function(data) {
+         //        console.log("categorys part")
+         //        console.log(data)
+         //        this.setState({
+         //          categorys : JSON.parse(data)
+         //        });
+         //      }.bind(this),
+         //      error: function(xhr, status, err) {
+         //        this.setState({
+         //          message : "something went wrong",
+         //        });
+         //      }.bind(this)
+         //    });
     }
 
     activeRoute(routeName) {

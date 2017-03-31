@@ -15,7 +15,7 @@ import './../public/styles/style.css'
 
 
 ReactDOM.render(
-	<Router history={browserHistory}>{routes}</Router>,
+	<Signin />,
     document.getElementById('root')
 );
 
