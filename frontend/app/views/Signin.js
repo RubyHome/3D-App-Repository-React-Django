@@ -17,64 +17,64 @@ class Signin extends Component {
     }
 
         handleSubmit(e){
-        //     if (this.state.username == "" || this.state.password == "") alert("Please fill the below form");
-        //     else {
-        //     function getCookie(name) {
-        //          var cookieValue = null;
-        //          if (document.cookie && document.cookie != '') {
-        //              var cookies = document.cookie.split(';');
-        //              for (var i = 0; i < cookies.length; i++) {
-        //                  var cookie = jQuery.trim(cookies[i]);
-        //                  // Does this cookie string begin with the name we want?
-        //                  if (cookie.substring(0, name.length + 1) == (name + '=')) {
-        //                      cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-        //                      break;
-        //                  }
-        //              }
-        //          }
-        //          return cookieValue;
-        //      }
+            if (this.state.username == "" || this.state.password == "") alert("Please fill the below form");
+            else {
+            function getCookie(name) {
+                 var cookieValue = null;
+                 if (document.cookie && document.cookie != '') {
+                     var cookies = document.cookie.split(';');
+                     for (var i = 0; i < cookies.length; i++) {
+                         var cookie = jQuery.trim(cookies[i]);
+                         // Does this cookie string begin with the name we want?
+                         if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                             cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                             break;
+                         }
+                     }
+                 }
+                 return cookieValue;
+             }
 
-        //     e.preventDefault();
-        //     $.ajax({
-        //       url: '/users/',
-        //       method: 'POST',
-        //       dataType: 'json',
-        //       contentType: "application/json; charset=utf-8", 
-        //       cache: false,
-        //       setCookie:document.cookie,
-        //        headers: {
-        //             "X-CSRFToken": getCookie("csrftoken")
-        //         },
-        //         data : JSON.stringify({
-        //             "username" : this.state.username,
-        //             "password" : this.state.password
-        //         }),
-        //       success: function(data) {
-        //         if (data) {
-        //                 this.setState({
-        //                   message : 'Welcome'
-        //                 });
+            e.preventDefault();
+            $.ajax({
+              url: '/users/',
+              method: 'POST',
+              dataType: 'json',
+              contentType: "application/json; charset=utf-8", 
+              cache: false,
+              setCookie:document.cookie,
+               headers: {
+                    "X-CSRFToken": getCookie("csrftoken")
+                },
+                data : JSON.stringify({
+                    "username" : this.state.username,
+                    "password" : this.state.password
+                }),
+              success: function(data) {
+                if (data) {
+                        this.setState({
+                          message : 'Welcome'
+                        });
 
-        //             browserHistory.push('/dashboard');
-        //             }
+                    browserHistory.push('/dashboard');
+                    }
 
-        //         else {
-        //             this.setState({
-        //                   message : "Unauthorized User,Please sign up"
-        //                 });
-        //             browserHistory.push('/dashboard');
-        //         }    
-        //       }.bind(this),
-        //       error: function(xhr, status, err) {
-        //         browserHistory.push('/dashboard');
-        //         console.log(err)
-        //         this.setState({
-        //           message : "something went wrong",
-        //         });
-        //       }.bind(this)
-        //     });
-        // }
+                else {
+                    this.setState({
+                          message : "Unauthorized User,Please sign up"
+                        });
+                    browserHistory.push('/dashboard');
+                }    
+              }.bind(this),
+              error: function(xhr, status, err) {
+                browserHistory.push('/dashboard');
+                console.log(err)
+                this.setState({
+                  message : "something went wrong",
+                });
+              }.bind(this)
+            });
+        }
         }
 
         handleGet(e){
@@ -102,14 +102,14 @@ class Signin extends Component {
             this.setState({
                 username : e.target.value
             });
-            console.log(e.target.value);
+
         }
 
         handleChange1(e){
             this.setState({
                 password : e.target.value
             });
-            console.log(e.target.value);
+
         }
 
     render() {

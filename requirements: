@@ -1,7 +1,0 @@
-requirements:
-
-1. install postgresql
-2. install django rest framework
-3. make migrations
-4. migrate db
-5. runserver
